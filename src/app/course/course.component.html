@@ -1,0 +1,14 @@
+
+    <div class="card " >
+        <div class="card-header">OUR COURSE LIST</div>
+        <div class="card-body">
+            <ul class="list-group" *ngFor="let a of studentList"> <!--through first for loop we fetch data from array-->
+                <li class="list-group-item" *ngFor="let b of a"
+                (click)="myclick(b.std_id)">
+                <!-- through 2nd for loop we fetch data from object,this course is a aray of object thats why we use 2 time of for loop-->
+                  {{b.course_name}}<span class="badge badge pill float-right badge-success">{{b.price | currency:'INR'}}</span>
+                </li>
+            </ul>
+       </div>
+
+        
